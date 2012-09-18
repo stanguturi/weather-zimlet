@@ -1,0 +1,20 @@
+<zimlet name="com_zimbra_weather" version="1.0" description="Displays Weather Information">
+  <include>weather.js</include>
+  <includeCSS>weather.css</includeCSS>  
+  <handlerObject>com_zimbra_weather</handlerObject>
+  
+  <zimletPanelItem label="Weather" icon="weather-panelIcon">
+    <toolTipText>Shows Weather Information</toolTipText>
+		<contextMenu>
+			<menuItem label="Weather for next 8 hours" id="weather_next_8hours"/>			
+			<menuItem label="Weather for next 7 days" id="weather_next_7days"/>
+			<menuItem label="Weather Overview" id="weather_overview"/>			
+			<menuItem/>
+			<menuItem label="Change preferences" id="change_zipcode"/>
+		</contextMenu>
+  </zimletPanelItem>
+	<userProperties>
+		<property type="string" name="weather_zipcode" value=""/>
+		<property type="string" name="show_weather_minical" value="false"/>		
+	</userProperties>
+</zimlet>
